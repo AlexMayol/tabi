@@ -1,0 +1,41 @@
+:root {
+  color-scheme: light dark;
+  --c-light: #eee;
+  --c-dark: #111;
+
+  /* spacings */
+  --zero: 0px;
+  --4xs: 2px;
+  --3xs: 4px;
+  --2xs: 8px;
+  --xs: 12px;
+  --s: 16px;
+  --m: 20px;
+  --l: 24px;
+  --xl: 32px;
+  --2xl: 48px;
+
+  /* Colors */
+  --positive: #b1ffc7;
+  --negative: #ffbfb1;
+  --neutral: #f1f1f7;
+  --text-black: #1b2134;
+
+  /* fonts */
+  --inter-prima: "Inter", sans-serif;
+}
+
+body {
+  background-color: #edebeb;
+  color: black;
+  font-size: 2rem;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  border: 1px solid gray;
+  border-radius: var(--m);
+  padding: var(--xs);
+}

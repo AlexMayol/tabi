@@ -1,0 +1,92 @@
+/* mobile ON */
+@media only screen and (max-width: 768px) {
+  :root {
+    --tab-padding-pill: var(--xs);
+    --tab-padding-underline: var(--2xs) 0;
+  }
+}
+
+/* mobile OFF */
+@media only screen and (min-width: 769px) {
+  :root {
+    --tab-padding-pill: var(--s);
+    --tab-padding-underline: var(--s) 0;
+  }
+}
+
+.tab-base {
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: #1b2134;
+  transition: all 200ms ease;
+  text-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  gap: var(--2xs);
+}
+
+.tab-pill {
+  height: var(--badge-height);
+  padding: var(--tab-padding-pill);
+  border-radius: 100px;
+  border: 1px solid #d3d3dc;
+  &:hover {
+    border: 1px solid #c4c5cf;
+    background-color: #f6f6fa;
+  }
+  &:active {
+    border: 1px solid #f1f1f7;
+    background-color: #585d71;
+  }
+  &:focus {
+    background-color: white;
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+  }
+
+  &.selected {
+    background-color: #1b2134;
+    color: white;
+    &:hover {
+      background-color: #343a4e;
+    }
+    &:active {
+      background-color: #585d71;
+    }
+    &:focus {
+      background-color: #1b2134;
+      outline: 2px solid #1b2134;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.tab-underline {
+  border-radius: var(--2xs);
+  padding: var(--tab-padding-underline);
+  &:focus {
+    outline: 2px solid #1b2134;
+    outline-offset: 4px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-radius: 1rem;
+  }
+  &:hover::after {
+    transition: all 200ms ease;
+    background-color: #c4c5cf;
+  }
+
+  &.selected {
+    &::after {
+      background-color: #1b2134;
+    }
+  }
+}

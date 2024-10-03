@@ -1,0 +1,12 @@
+.typography-base {
+  line-height: 150%;
+  font-family: var(--inter-prima);
+}
+
+.small {
+  font-size: 12px;
+}
+
+.regular {
+  font-size: 14px;
+}

@@ -1,0 +1,31 @@
+/* mobile ON */
+@media only screen and (max-width: 768px) {
+  :root {
+    --list-gap-pill: var(--l);
+    --list-gap-underline: var(--l);
+  }
+}
+
+/* mobile OFF */
+@media only screen and (min-width: 769px) {
+  :root {
+    --list-gap: var(--xl);
+  }
+}
+
+.tab-list-base {
+  display: flex;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 0; /* Remove the vertical scrollbar */
+    height: 0; /* Remove the horizontal scrollbar */
+  }
+
+  &.tab-list-pill {
+    gap: var(--2xs);
+  }
+
+  &.tab-list-underline {
+    gap: var(--l);
+  }
+}

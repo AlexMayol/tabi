@@ -1,0 +1,35 @@
+/* mobile ON */
+@media only screen and (max-width: 768px) {
+  :root {
+    --badge-padding: var(--4xs) var(--3xs);
+    --badge-radius: var(--2xs);
+  }
+}
+
+/* mobile OFF */
+@media only screen and (min-width: 769px) {
+  :root {
+    --badge-padding: var(--3xs) var(--2xs);
+    --badge-radius: var(--xs);
+  }
+}
+
+.badge-base {
+  padding: var(--badge-padding);
+  border-radius: var(--badge-radius);
+  color: var(--text-black);
+  font-family: var(--inter-prima);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: var(--xs);
+  line-height: 18px;
+  &.neutral {
+    background-color: var(--neutral);
+  }
+  &.positive {
+    background-color: var(--positive);
+  }
+  &.negative {
+    background-color: var(--negative);
+  }
+}
